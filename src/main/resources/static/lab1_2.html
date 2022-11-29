@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<from th:action="@{/lin}" method="post">
+<table>
+  <tr>
+    <h1>图书馆读者调查问卷</h1>
+  </tr>
+  <tr>
+    <p>为了能够及时了解您对图书馆的需求，提升我校图书馆文献资源建设的质量和水平，更好的为我校教学科研服务，我馆特设计了问卷调查题目如下，请协助填写，谢谢您的合作！</p>
+  </tr>
+  <tr>
+    <span>1.你的年级</span><br>
+    请你选择:<select>
+    <option>请你选择</option><br>
+  </select><br>
+  </tr>
+  <tr>
+    <span>2.你的专业</span><br>
+    <input type="text"><br>
+  </tr>
+  <tr>
+    <span>对于图书馆的阅览环境</span><br>
+    <input type="radio" name="environment">满意<br>
+    <input type="radio" name="environment">基本满意<br>
+    <input type="radio" name="environment">不满意 你的建议:<input type="text"><br>
+  </tr>
+  <tr>
+    <span>4.你到图书馆的原因是(可多选):</span><br>
+    <input type="checkbox" name="reason" >借阅专业图书<br>
+    <input type="checkbox" name="reason">随便坐坐,翻翻书刊<br>
+    <input type="checkbox" name="reason">借阅光盘<br>
+    <input type="checkbox" name="reason">参加图书馆组织的活动<br>
+    <input type="checkbox" name="reason">自习,复习功课<br>
+    <input type="checkbox" name="reason">上网<br>
+    <input type="checkbox" name="reason">检索电子文献<br>
+  </tr>
+  <tr>
+    <span>5.你到图书的频率</span><br>
+    <input type="radio" name="fre">几乎每天<br>
+    <input type="radio" name="fre">每周1-2次<br>
+    <input type="radio" name="fre">每月1-2次<br>
+    <input type="radio" name="fre">几乎不去<br>
+  </tr>
+  <tr>
+    <span>6.你对学校宝贵的意见</span><br>
+    <textarea placeholder="请你提出宝贵的建议" cols="50" rows="10"></textarea>
+  </tr>
+</table>
+</from>
+</body>
+</html>

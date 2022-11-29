@@ -1,0 +1,76 @@
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=ssm;encrypt=false
+    username: sa
+    password: 12345
+#    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    druid:
+      stat-view-servlet:
+        enabled: true
+        login-password: admin
+        login-username: admin
+      web-stat-filter:
+        enabled: true
+        url-pattern: /*
+        exclusions: '*.js,*.css,*.jpg,*.png,*.gif,*.ico,/druid/*'
+      filters: wall,stat
+      aop-patterns: com.example.spring_web_admin.*
+      filter:
+        stat:
+          slow-sql-millis: 1000
+          log-slow-sql: true
+          enabled: true
+        wall:
+          enabled: true
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  #          慢查询
+  jdbc:
+    template:
+      query-timeout: 200
+  redis:
+    host: 192.168.200.128
+    port: 6379
+    database: 0
+    connect-timeout: 150000
+    jedis:
+      pool:
+        max-active: 20
+        max-wait: -1
+        max-idle: 5
+        min-idle: 0
+  profiles:
+    active: prod
+
+#    client-type: jedis
+#    type: com.zaxxer.hikari.HikariDataSource
+server:
+  port: 8080
+  servlet:
+    session:
+      timeout: 100m
+mybatis:
+#  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+management:
+  endpoints:
+    enabled-by-default: true
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+#    info:
+#      enabled: true
+    env:
+      enabled: true
+
+#info:
+#  appName: lin
+#  version: 1.0.0
