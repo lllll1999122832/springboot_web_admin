@@ -17,5 +17,9 @@ public class helloJava {
     public String xaiomi(){
         return "this is Mi 13 series";
     }
+    @RequestMapping("/huawei")
+    public String huawei(){
+        return "you must buy huawei phone!";
+    }
 
 }
