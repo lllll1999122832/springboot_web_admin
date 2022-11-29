@@ -13,5 +13,9 @@ public class helloJava {
     public String java(){
         return "this is hello";
     }
+    @RequestMapping("/xaiomi")
+    public String xaiomi(){
+        return "this is Mi 13 series";
+    }
 
 }
