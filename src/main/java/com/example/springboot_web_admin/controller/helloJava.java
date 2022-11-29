@@ -9,5 +9,9 @@ public class helloJava {
     public String hello(){
         return "this is java";
     }
+    @RequestMapping("/java")
+    public String java(){
+        return "this is hello";
+    }
 
 }
