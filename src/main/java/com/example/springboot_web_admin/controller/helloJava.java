@@ -23,6 +23,7 @@ public class helloJava {
     }
     @RequestMapping("/huawei")
     public String huawei(){
+        System.out.println("怎么回事我又进来了啊");
         return "you must buy huawei phone!";
     }
 
