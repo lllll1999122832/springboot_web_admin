@@ -25,7 +25,7 @@ public class helloJava {
     public String huawei(){
         System.out.println("怎么回事我又进来了啊");
         for (int i = 0; i < 20; i++) {
-            System.out.println("哈哈哈哈哈哈");
+            System.out.println("LEICA");
             System.out.println("we must buy "+i+" xiaomi 13 pro ");
         }
         return "you must buy huawei phone!";
