@@ -24,6 +24,9 @@ public class helloJava {
     @RequestMapping("/huawei")
     public String huawei(){
         System.out.println("怎么回事我又进来了啊");
+        for (int i = 0; i < 20; i++) {
+            System.out.println("哈哈哈哈哈哈");
+        }
         return "you must buy huawei phone!";
     }
 
